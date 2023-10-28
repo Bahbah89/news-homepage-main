@@ -158,7 +158,7 @@ body {
   margin-bottom: 40px;
   background-color: hsl(240, 100%, 5%);
   color: #fff;
-  padding: 15px;
+  padding: 18px;
 }
 span {
   color: hsl(35, 77%, 62%);
@@ -178,9 +178,17 @@ h3 {
   margin: 5px 0px 10px 0px;
 }
 
+#lineOne,
+#lineTwo {
+  border-bottom: solid 1px hsl(236, 13%, 42%);
+
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
 .bottom-pics {
   float: left;
-  max-width: 38%;
+  max-width: 30%;
 
   margin: 10px 10px 10px 0px;
 }
@@ -321,6 +329,4 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-
-  
 }
