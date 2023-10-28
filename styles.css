@@ -61,7 +61,12 @@ body {
   background-color: #fff;
   position: absolute;
   top: -3%;
-  left: 25%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  opacity: 100%;
+  z-index: 1;
+  width: 60%;
 
   /*display: flex;
   flex-direction: column;
@@ -101,9 +106,19 @@ body {
   transform: rotate(-45deg);
 }
 
+#w {
+  font-size: 50px;
+  font-weight: 900;
+  transform: translateY(-25%);
+}
+
 .top > p {
   text-align: center;
   font-weight: 900;
+}
+
+.menu {
+  font-weight: 400;
 }
 
 .top {
@@ -188,7 +203,7 @@ h3 {
 
 .bottom-pics {
   float: left;
-  max-width: 30%;
+  max-width: 20%;
 
   margin: 10px 10px 10px 0px;
 }
