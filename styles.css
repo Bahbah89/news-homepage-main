@@ -40,11 +40,13 @@ Very dark blue: hsl(240, 100%, 5%)
 }
 
 body {
+  position: relative;
   font-family: "Inter", sans-serif;
   font-size: 15px;
-  background-color: hsl(36, 100%, 99%);
+  background-color: hsl(0, 0%, 100%);
 }
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +57,70 @@ body {
   padding: 0.3rem;
 }
 
+.hamburger-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  z-index: 1;
+  width: 60%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.top > p {
+  text-align: center;
+  font-weight: 900;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.menu {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.open {
+  display: none;
+}
+
 .mob-pic {
+  margin-bottom: 20px;
   width: 100%;
   border: solid black;
 }
@@ -66,6 +131,7 @@ body {
   margin-bottom: 1%;
   transform: translateY(-20px);
 }
+
 #top-text {
   font-size: 11.5px;
   font-weight: 500;
@@ -82,10 +148,6 @@ body {
   background-color: hsl(5, 85%, 63%);
   color: #fff;
   letter-spacing: 3px;
-}
-
-#read-more:hover {
-  background-color: hsl(240, 100%, 5%);
   cursor: pointer;
 }
 
@@ -104,8 +166,7 @@ h3 {
   margin-top: 20px;
   font-size: 15px;
 }
-.highlight-title:hover {
-  color: hsl(35, 77%, 62%);
+.highlight-title {
   cursor: pointer;
 }
 
@@ -149,11 +210,9 @@ h3 {
 }
 .bottom-title {
   font-size: 15px;
-}
-.bottom-title:hover {
-  color: hsl(5, 85%, 63%);
   cursor: pointer;
 }
+
 .bottom-text {
   font-size: 12px;
   width: 100%;
@@ -170,6 +229,28 @@ h3 {
 @media (min-width: 900px) {
   .hidden {
     display: block;
+  }
+
+  .top {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: none;
+    transform: translateY(-5%);
+
+    font-size: 10px;
+    font-weight: 100;
+  }
+  .close,
+  .hamburger-icon {
+    display: none;
+  }
+
+  .mob-pic {
+    display: none;
   }
 
   body {
@@ -222,6 +303,9 @@ h3 {
     grid-row: 3 / 3;
     width: 50%;
     height: 90%;
+  }
+  #read-more:hover {
+    background-color: hsl(240, 100%, 5%);
   }
 
   .blue-block {
