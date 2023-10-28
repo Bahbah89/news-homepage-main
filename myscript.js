@@ -17,18 +17,17 @@ const closeWindow = function () {
   mobPic.style.filter = "";
 };
 
-hamburgerIcon.addEventListener("click", function () {
-  console.log("hello");
+const openWindow = function () {
   hamburgerMenu.classList.remove("hidden");
   container.style.opacity = "30%";
   container.style.filter = "blur(4px)";
   mobPic.style.opacity = "30%";
   mobPic.style.filter = "blur(4px)";
-});
+};
 
+hamburgerIcon.addEventListener("click", openWindow);
 mobPic.addEventListener("click", closeWindow);
 container.addEventListener("click", closeWindow);
-
 close.addEventListener("click", closeWindow);
 
 read.addEventListener("mouseover", function () {
